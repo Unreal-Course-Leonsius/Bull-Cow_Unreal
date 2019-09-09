@@ -1,0 +1,9 @@
+{
+	"files.exclude": {
+		"D:/Unreal Projects/Bull-Cow_Unreal/BullCowGame-starter-kit/.vs": true,
+		"D:/Unreal Projects/Bull-Cow_Unreal/BullCowGame-starter-kit/.vscode": true,
+		"D:/Unreal Projects/Bull-Cow_Unreal/BullCowGame-starter-kit/Content": true,
+		"D:/Unreal Projects/Bull-Cow_Unreal/BullCowGame-starter-kit/Intermediate": true,
+		"D:/Unreal Projects/Bull-Cow_Unreal/BullCowGame-starter-kit/Saved": true
+	}
+}

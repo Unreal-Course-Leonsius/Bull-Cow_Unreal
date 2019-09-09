@@ -1,0 +1,128 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "BullCowGame (Debug)",
+			"request": "launch",
+			"preLaunchTask": "BullCowGame Win64 Debug Build",
+			"program": "D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\Binaries\\Win64\\BullCowGame-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BullCowGame (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "BullCowGame Win64 DebugGame Build",
+			"program": "D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\Binaries\\Win64\\BullCowGame-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BullCowGame (Development)",
+			"request": "launch",
+			"preLaunchTask": "BullCowGame Win64 Development Build",
+			"program": "D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\Binaries\\Win64\\BullCowGame.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BullCowGame (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "BullCowGame Win64 Shipping Build",
+			"program": "D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\Binaries\\Win64\\BullCowGame-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BullCowGame (Test)",
+			"request": "launch",
+			"preLaunchTask": "BullCowGame Win64 Test Build",
+			"program": "D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\Binaries\\Win64\\BullCowGame-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "D:\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BullCowGameEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "BullCowGameEditor Win64 Debug Build",
+			"program": "D:\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
+			"args": [
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject"
+			],
+			"cwd": "D:\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BullCowGameEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "BullCowGameEditor Win64 DebugGame Build",
+			"program": "D:\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject"
+			],
+			"cwd": "D:\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BullCowGameEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "BullCowGameEditor Win64 Development Build",
+			"program": "D:\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject"
+			],
+			"cwd": "D:\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "D:\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "clr",
+			"request": "launch",
+			"program": "D:\\UE_4.22\\Engine\\Binaries\\DotNET\\UnrealBuildTool.exe",
+			"console": "externalTerminal",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=\"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject\"",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "D:\\UE_4.22"
+		}
+	]
+}
