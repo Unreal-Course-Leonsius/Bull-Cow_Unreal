@@ -32,6 +32,8 @@ public:
 	void PrintLine(const FString& Line);
 	void ClearScreen();
 
+	TSet<FString>* GetWordMap();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -58,4 +60,10 @@ private:
 
 	int32 PressedBindingIndex;
 	int32 RepeatBindingIndex;
+
+private:
+	void FillWordMap(FString Letter);
+
+private:
+	TSet<FString> WordMap;
 };

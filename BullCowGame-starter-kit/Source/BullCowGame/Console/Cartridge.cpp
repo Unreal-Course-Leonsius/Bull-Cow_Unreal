@@ -8,7 +8,7 @@
 void UCartridge::BeginPlay()
 {
 	Super::BeginPlay();
-	Terminal = GetOwner()->FindComponentByClass<UTerminal>();
+	Terminal = GetOwner()->FindComponentByClass<UTerminal>();  // we get here Terminal const
 	checkf(Terminal, TEXT("[%s]: No Terminal found"), *GetName())
 }
 
@@ -25,4 +25,9 @@ void UCartridge::PrintLine(const TCHAR* Line) const
 void UCartridge::ClearScreen() const
 {
 	Terminal->ClearScreen();
+}
+
+UTerminal* UCartridge::GetTerminal() const
+{
+	return Terminal;
 }

@@ -12,7 +12,7 @@ class BULLCOWGAME_API UCartridge : public UActorComponent
 {
 	GENERATED_BODY()
 public:
-	virtual void OnInput(const FString& Input) PURE_VIRTUAL(UCartridge::OnInput,);
+	virtual void OnInput(const FString& Input) PURE_VIRTUAL(UCartridge::OnInput, );
 protected:
 	void BeginPlay() override;
 
@@ -24,6 +24,10 @@ protected:
 		PrintLine(FString::Printf(Fmt, Args...));
 	}
 	void ClearScreen() const;
+public:
+
+	class UTerminal* GetTerminal() const;
+	
 private:
 	class UTerminal* Terminal;
 };

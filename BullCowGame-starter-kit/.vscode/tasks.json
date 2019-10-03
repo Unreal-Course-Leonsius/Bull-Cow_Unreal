@@ -812,6 +812,276 @@
 			}
 		},
 		{
+			"label": "BullCowGame Android Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Debug",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Debug",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BullCowGame Android Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Debug",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"DebugGame",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"DebugGame",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BullCowGame Android DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"DebugGame",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Development",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Development",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BullCowGame Android Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Development",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Shipping",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Shipping",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BullCowGame Android Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Shipping",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Test",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Test",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BullCowGame Android Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
+			"label": "BullCowGame Android Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"BullCowGame",
+				"Android",
+				"Test",
+				"D:\\Unreal Projects\\Bull-Cow_Unreal\\BullCowGame-starter-kit\\BullCowGame.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "D:\\UE_4.22"
+			}
+		},
+		{
 			"label": "BullCowGame HTML5 Debug Build",
 			"group": "build",
 			"command": "Engine\\Build\\BatchFiles\\Build.bat",

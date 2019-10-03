@@ -19,6 +19,7 @@ void UTerminal::BeginPlay()
 
 void UTerminal::ActivateTerminal()
 {
+	// If Press any Key calls Delegate function
     FInputKeyBinding PressedBinding(EKeys::AnyKey, EInputEvent::IE_Pressed);
     PressedBinding.KeyDelegate.BindDelegate(this, &UTerminal::OnKeyDown);
 
@@ -27,6 +28,7 @@ void UTerminal::ActivateTerminal()
 
 	if (GetOwner()->InputComponent == nullptr) return;
 
+	// Put this PressedBinding into Owner's InputComponent <-(which may be belongs to PlayerController)
     PressedBindingIndex = GetOwner()->InputComponent->KeyBindings.Emplace(MoveTemp(PressedBinding));
     RepeatBindingIndex = GetOwner()->InputComponent->KeyBindings.Emplace(MoveTemp(RepeatBinding));
 }
@@ -44,12 +46,16 @@ void UTerminal::PrintLine(const FString& Line)
 {
 	FString Input = Line;
 	FString Left, Right;
+
+	// Split the Input String if it include '\n' symbol and split it on that symbol
 	while (Input.Split(TEXT("\n"), &Left, &Right))
 	{
-		Buffer.Emplace(Left);
-		Input = Right;
+		UE_LOG(LogTemp, Warning, TEXT("Split is true"));
+		Buffer.Emplace(Left); // Left from '\n' symbol
+		Input = Right;        // Right from '\n' symbol
 	} 
-	Buffer.Emplace(Input);
+
+	Buffer.Emplace(Input); // put Right part into Buffer massive
 	UpdateText();
 }
 
@@ -73,10 +79,13 @@ FString UTerminal::GetScreenText() const
 
 TArray<FString> UTerminal::WrapLines(const TArray<FString>& Lines) const
 {
+	//UE_LOG(LogTemp, Warning,TEXT("WrapLines Line Length = %i"), Lines.Num());
 	TArray<FString> WrappedLines;
 	for (auto &&Line : Lines)
 	{
+
 		FString CurrentLine = Line;
+		//UE_LOG(LogTemp, Warning,TEXT("CurrentLine = %s"), *CurrentLine);
 		do
 		{
 			WrappedLines.Add(CurrentLine.Left(MaxColumns));
@@ -97,11 +106,17 @@ void UTerminal::Truncate(TArray<FString>& Lines) const
 
 FString UTerminal::JoinWithNewline(const TArray<FString>& Lines) const
 {
+	// Convert String massive to one String
 	FString Result;
 	for (auto &&Line : Lines)
 	{
+		// When press Enter key here comes two Elements 1) string 2) "$> " + InputLine.empty
+		// foreach loop split it two parts and both of them add "<br>" outcome this we get
+		// 1 string +"<br>" = Log string and breakdown next line
+		// 2 "$> " + InputLine.empty = New line start with $> and we can put other word 
 		Result += Line + TEXT(" <br>");
 	}
+
 	return Result;
 }
 
@@ -122,11 +137,22 @@ void UTerminal::OnKeyDown(FKey Key)
 	if (KeyState.IsShiftDown() || KeyState.AreCapsLocked())
 	{
 		InputLine += KeyString.ToUpper();
+		if(KeyString != "")
+		{
+			FillWordMap(KeyString.ToUpper());
+		}
 	}
 	else
 	{
 		InputLine += KeyString.ToLower();
+		if(KeyString != "")
+		{
+			FillWordMap(KeyString.ToLower());
+		}
+		
+		//WordMap.Add(charaqter, false);
 	}
+
 
 	UpdateText();
 }
@@ -141,7 +167,7 @@ void UTerminal::AcceptInputLine()
 		Cartridge->OnInput(InputLine);
 	}
 	InputLine = TEXT("");
-
+	WordMap.Empty();
 }
 
 void UTerminal::Backspace()
@@ -169,4 +195,15 @@ FString UTerminal::GetKeyString(FKey Key) const
 void UTerminal::UpdateText()
 {
 	TextUpdated.Broadcast(GetScreenText());
+}
+
+TSet<FString>* UTerminal::GetWordMap()
+{
+	return &WordMap;
+}
+
+void UTerminal::FillWordMap(FString Letter)
+{
+	WordMap.Add(Letter);
+	//UE_LOG(LogTemp,Warning, TEXT("WordMap size = %i"), WordMap.Num());
 }
